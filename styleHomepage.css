@@ -1,0 +1,51 @@
+/* Linked to Homepage.html */
+
+*
+{ 
+    font-family: Roboto, "Arial Black", sans-serif;
+    line-height: 125%;
+    box-sizing: border-box;
+}
+
+html
+{
+    background-image: url('Pictures/Qb8b9UC.jpg');
+    background-size: cover;
+    /* background-color: #2d333d; */
+}
+
+#clock
+{
+    font-size: 500%;
+    text-align: center;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.boxContainer 
+{
+    margin: auto;
+    margin-top: 27%;
+    width: 100%;
+    height: 100%;
+}
+
+.boxes
+{
+    width: 13%;
+    height: 13%;
+    display: inline-block;
+}
+
+.boxes img
+{
+    width: 100%;
+}
+
+#twitch
+{
+    margin-left: 16%;
+}
