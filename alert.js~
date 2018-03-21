@@ -1,4 +1,0 @@
-function main()
-{
-    alert("My First Jquery Test");
-}
