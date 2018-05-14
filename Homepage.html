@@ -4,22 +4,18 @@
 
 <html>
 
-    <div id = "background">
-        <script src = "jquery-3.1.1.js"></script>
-        <script src = "background.js"></script>
-    </div>
-
     <head>
         <Title>Homepage</Title>
         <link href = "styleHomepage.css" type = "text/css" rel = "stylesheet">
-        <link href = "https://fonts.googleapis.com/css?family=Roboto:400,700" rel = "stylesheet"> 
+        <link href = "https://fonts.googleapis.com/css?family=Roboto:400,700" rel = "stylesheet">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src = "background.js"></script>
+        <script src = "clock.js"></script>
     </head>
 
-    <div id = "clock">
-         <script src = "jquery-3.1.1.js"></script>
-         <script src = "clock.js"></script>
-    </div>
-    
+    <div id = "clock"></div>
+
     <div class = "boxContainer">
         <div id = "twitch" class = "boxes">
             <a href = "https://www.twitch.tv/directory">
@@ -50,6 +46,8 @@
                 <img src = "Pictures\amazon.png" width = "100" height = "100" alt = "Amazon"/>
             </a>
         </div>
+
+        <button onclick = "changeImage()" type = "button">Change Image</button>
     </div>
         
 </html>

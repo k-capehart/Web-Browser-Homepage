@@ -2,8 +2,6 @@
 
 * { 
     font-family: Roboto, "Arial Black", sans-serif;
-    line-height: 125%;
-    box-sizing: border-box;
 }
 
 body {
@@ -12,10 +10,6 @@ body {
     background-color: black;
 }
 
-body background-image {
-    height: 100%;
-    width: 100%;
-}
 
 #clock {
     font-size: 500%;
@@ -28,10 +22,19 @@ body background-image {
 }
 
 .boxContainer {
+    position: absolute;
     margin: auto;
-    width: 100%;
+    height: 500px;
+    width: 100px;
+    top: 20%;
 }
 
 .boxes {
     display: block;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border-color: grey;
 }
