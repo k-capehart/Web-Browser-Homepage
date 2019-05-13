@@ -22,11 +22,7 @@ body {
 }
 
 .boxContainer {
-    position: absolute;
     margin: auto;
-    height: 500px;
-    width: 100px;
-    top: 20%;
 }
 
 .boxes {
@@ -37,4 +33,5 @@ button {
     background-color: black;
     color: white;
     border-color: grey;
+    width: 75px;
 }
