@@ -5,51 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Started</title>
     <link href="styles.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="background.js"></script>
-    <script src="clock.js"></script>
 </head>
 <body>
     <div class="glass">
-        <div id="clock"></div>
         <div id="greeting">Good Day</div>
+        <div id="clock">
+            <div id="hour"></div>
+            <div id="minute"></div>
+            <div id="suffix"></div>
+        </div>
+        <div id="date"></div>
+        <div id="question">What would you like to do today?</div>
+        <div class="icons">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-reddit"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-video"></i></a></li>
+            </ul>
+        </div>
     </div>
-
-    <div class="boxContainer">
-        <div id="twitch" class="boxes">
-            <a href="https://www.twitch.tv/directory">
-                <img src="Pictures\twitch.png" width="75" height="75" alt="Twitch"/>
-            </a>
-        </div>
-
-        <div id="youtube" class="boxes">
-            <a href="https://www.youtube.com/feed/subscriptions">
-                <img src="Pictures\youtube.png" width="75" height="75" alt="Youtube"/>
-            </a>
-        </div>
-
-        <div id="netflix" class="boxes">
-            <a href="https://www.netflix.com/browse">
-                <img src="Pictures\netflix.png" width="75" height="75" alt="Netflix"/>
-            </a>
-        </div>
-
-        <div id="reddit" class="boxes">
-            <a href="https://www.reddit.com/">
-                <img src="Pictures\reddit.png" width="75" height="75" alt="Reddit"/>
-            </a>
-        </div>
-
-         <div id="amazon" class="boxes">
-            <a href="https://smile.amazon.com/">
-                <img src="Pictures\amazon.png" width="75" height="75" alt="Amazon"/>
-            </a>
-        </div>
-
-        <button onclick="changeImage()" type="button">Change Image</button>
-    </div>
+    <script src="script.js"></script>
 </body>
 </html>
