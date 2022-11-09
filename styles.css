@@ -1,34 +1,42 @@
-/* Linked to Homepage.html */
-
 * { 
     font-family: 'Inter';
+    color: white;
 }
-
 body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: black;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
+.glass {
+    width: 50rem;
+    height: 25rem;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+    border-radius: 0.75rem;
+    background-color: rgba(255,255,255,0.15);
+    backdrop-filter: blur(0.7rem);
 
-
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
 #clock {
     font-size: 500%;
     text-align: center;
-    text-shadow:
-    -1px -1px 0 white,
-    1px -1px 0 white,
-    -1px 1px 0 white,
-    1px 1px 0 white;
 }
-
 .boxContainer {
+    display: flex;
     margin: auto;
 }
-
 .boxes {
     display: block;
 }
-
 button {
     background-color: black;
     color: white;
