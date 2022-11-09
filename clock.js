@@ -1,5 +1,4 @@
-function startTime() 
-{   
+function startTime() {  
     // Get time values
     var timeOfDay = "AM";
     var today = new Date();
@@ -16,15 +15,13 @@ function startTime()
     second = checkTime(second);
 
     // Put time in the html document
-    document.getElementById('clock').innerHTML =
-    hour + ":" + minute + ":" + second + " " + timeOfDay;
+    document.getElementById('clock').innerHTML = hour + ":" + minute + ":" + second + " " + timeOfDay;
     
     // Call function again after specified amount of time
     var t = setTimeout(startTime, 500);
 }
 
-function checkTime(i) 
-{       
+function checkTime(i) {       
     // Add a 0 for numbers less than 10
     if (i < 10) 
     {
@@ -34,8 +31,7 @@ function checkTime(i)
     return i;
 }
 
-function convertTimeOfDay(hour, timeOfDay)
-{
+function convertTimeOfDay(hour, timeOfDay) {
     // Make the time AM or PM
     if (hour > 12)
     {
@@ -49,18 +45,14 @@ function convertTimeOfDay(hour, timeOfDay)
     return timeOfDay;
 }
 
-function convertHour(hour)
-{
-    // Convert it to a 12 hour clock
-    if (hour == 0)
-    {
+function convertHour(hour) {
+    // Display time in the 12-hour format
+    if (hour == 0) {
         hour = 12;
     }
-    if (hour > 12)
-    {
+    if (hour > 12) {
         hour = hour - 12;
     }
-
     return hour;
 }
 
