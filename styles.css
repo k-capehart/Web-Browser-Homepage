@@ -8,8 +8,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* fallback gradient in case JavaScript does not load */
     background: linear-gradient(-45deg, #B9E49F, #3DA597, #00617A, #003F5F);
     background-size: 400% 400%;
+    /* fallback animation in case JavaScript does not load */
 	animation: gradient 8s ease infinite;
 	height: auto;
 }
@@ -17,7 +19,6 @@ body {
 /* GLASS OVERLAY */
 
 .glass {
-    z-index: 2;
     width: 50rem;
     height: 30rem;
     padding: 1.2rem;
