@@ -6,7 +6,7 @@ let today = new Date();
 let hour = today.getHours();
 let minute = today.getMinutes();
 let second = today.getSeconds();
-let day = today.getDay();
+let day = today.getDate();
 let month = today.getMonth();
 let year = today.getFullYear();
 
