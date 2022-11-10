@@ -1,4 +1,6 @@
-// get/initialize time and date values
+// INITIALIZATIONS
+
+// get/initialize time and date values - global variables
 let timeOfDay = "AM";
 let today = new Date();
 let hour = today.getHours();
@@ -13,17 +15,6 @@ minute = checkTime(minute);
 second = checkTime(second);
 
 // CODE FOR THE SITE BACKGROUND
-
-function changeImage() {
-	let fileList = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.png', '9.jpg',
-					'10.jpg', '11.jpg', '12.jpg', '13.png', '14.jpg', '15.jpg', '16.jpg', '17.jpg',
-					'18.jpg', '19.jpg', '20.jpg', '21.jpg', '22.jpg', '24.jpg', '25.jpg',
-					'26.jpg', '27.jpg', '28.jpg', '29.jpg', '30.jpg', '34.jpg'];
-
-    // selecting random image from fileList[] and setting it as background image
-	let filePath = 'img/background/' + fileList[Math.floor(Math.random() * fileList.length)];
-	document.body.style.backgroundImage = 'url(' + filePath + ')';
-}
 
 function setBackgroundGradient() {
     // Setting background gradients according to the time of the day
@@ -70,13 +61,12 @@ function loadGlassOverlayComponents() {
     
     // convert the time to a 12-hour clock
     timeOfDay = convertTimeOfDay(hour, timeOfDay);
-    hour = convertHour(hour);
 
     // set the suffix of the day
     let daySuffix;
-    if (day === 1) daySuffix = 'st';
-    else if (day === 2) daySuffix = 'nd';
-    else if (day === 3) daySuffix = 'rd';
+    if (day === 1 || day === 21 || day === 31) daySuffix = 'st';
+    else if (day === 2 || day === 22) daySuffix = 'nd';
+    else if (day === 3 || day === 23) daySuffix = 'rd';
     else daySuffix = 'th';
 
     // get the name of the month
@@ -85,10 +75,10 @@ function loadGlassOverlayComponents() {
     // display the time on the glass overlay
     document.getElementById('hour').innerHTML = convertHour(hour);
     document.getElementById('minute').innerHTML = ":" + minute + "&nbsp;";
-    document.getElementById('suffix').innerHTML = convertTimeOfDay(hour, timeOfDay);
+    document.getElementById('timeSuffix').innerHTML = convertTimeOfDay(hour, timeOfDay);
     
     // display the date on the glass overlay
-    document.getElementById('date').innerHTML = "Today is the " + day + daySuffix + " of " + monthNames[month - 1] + " " + year;
+    document.getElementById('date').innerHTML = "Today is the " + day + daySuffix + " of " + monthNames[month] + " " + year;
 
     // Call function again after specified amount of time
     let t = setTimeout(loadGlassOverlayComponents, 500);
@@ -123,7 +113,6 @@ function convertHour(hourValue) {
     return hourValue;
 }
 
-// function calls
-$(document).ready(loadGlassOverlayComponents);
-// $(document).ready(changeImage);
+// jQuery function calls
 $(document).ready(setBackgroundGradient);
+$(document).ready(loadGlassOverlayComponents);
