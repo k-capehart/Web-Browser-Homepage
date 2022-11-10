@@ -80,12 +80,12 @@ function loadGlassOverlayComponents() {
     // display the date on the glass overlay
     document.getElementById('date').innerHTML = "Today is the " + day + daySuffix + " of " + monthNames[month] + " " + year;
 
-    // Call function again after specified amount of time
+    // call function again after specified amount of time
     let t = setTimeout(loadGlassOverlayComponents, 500);
 }
 
 function checkTime(i) {       
-    // Add a 0 for numbers less than 10
+    // concatenate a zero for numbers less than 10
     if (i < 10) {
         i = "0" + i
     }
@@ -93,7 +93,7 @@ function checkTime(i) {
 }
 
 function convertTimeOfDay(hour, timeOfDay) {
-    // Make the time AM or PM
+    // make the time AM or PM
     if (hour > 12) {
         timeOfDay = "PM";
     } else {
@@ -103,7 +103,7 @@ function convertTimeOfDay(hour, timeOfDay) {
 }
 
 function convertHour(hourValue) {
-    // Display time in the 12-hour format
+    // display time in the 12-hour format
     if (hourValue == 0) {
         hourValue = 12;
     }
