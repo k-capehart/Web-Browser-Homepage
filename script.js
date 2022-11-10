@@ -1,3 +1,13 @@
+// get/initialize time and date values
+let timeOfDay = "AM";
+let today = new Date();
+let hour = today.getHours();
+let minute = today.getMinutes();
+let second = today.getSeconds();
+let day = today.getDay();
+let month = today.getMonth();
+let year = today.getFullYear();
+
 // CODE FOR THE SITE BACKGROUND
 
 function changeImage() {
@@ -14,15 +24,7 @@ function changeImage() {
 // CODE FOR THE GLASS OVERLAY AND ITS CHILD COMPONENTS
 
 function loadGlassOverlayComponents() {
-    // get/initialize time and date values
-    let timeOfDay = "AM";
-    let today = new Date();
-    let hour = today.getHours();
-    let minute = today.getMinutes();
-    let second = today.getSeconds();
-    let day = today.getDay();
-    let month = today.getMonth();
-    let year = today.getFullYear();
+    
 
     // set the greeting message according the time of the day
     if (hour < 5) {
@@ -38,8 +40,8 @@ function loadGlassOverlayComponents() {
     }
     
     // convert the time to a 12-hour clock
-    timeOfDay = convertTimeOfDay(hour, timeOfDay);
-    hour = convertHour(hour);
+    // timeOfDay = convertTimeOfDay(hour, timeOfDay);
+    // hour = convertHour(hour);
     
     // check the time and adjust the format
     minute = checkTime(minute);
@@ -56,9 +58,9 @@ function loadGlassOverlayComponents() {
     let monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
     // display the time on the glass overlay
-    document.getElementById('hour').innerHTML = hour;
+    document.getElementById('hour').innerHTML = convertHour(hour);
     document.getElementById('minute').innerHTML = ":" + minute + "&nbsp;";
-    document.getElementById('suffix').innerHTML = timeOfDay;
+    document.getElementById('suffix').innerHTML = convertTimeOfDay(hour, timeOfDay);
     
     // display the date on the glass overlay
     document.getElementById('date').innerHTML = "Today is the " + day + daySuffix + " of " + monthNames[month - 1] + " " + year;
