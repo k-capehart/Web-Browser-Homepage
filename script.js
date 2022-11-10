@@ -8,6 +8,10 @@ let day = today.getDay();
 let month = today.getMonth();
 let year = today.getFullYear();
 
+// check the time and adjust the format
+minute = checkTime(minute);
+second = checkTime(second);
+
 // CODE FOR THE SITE BACKGROUND
 
 function changeImage() {
@@ -39,12 +43,8 @@ function loadGlassOverlayComponents() {
     }
     
     // convert the time to a 12-hour clock
-    // timeOfDay = convertTimeOfDay(hour, timeOfDay);
-    // hour = convertHour(hour);
-    
-    // check the time and adjust the format
-    minute = checkTime(minute);
-    second = checkTime(second);
+    timeOfDay = convertTimeOfDay(hour, timeOfDay);
+    hour = convertHour(hour);
 
     // set the suffix of the day
     let daySuffix;
