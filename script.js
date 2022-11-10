@@ -24,19 +24,18 @@ function changeImage() {
 // CODE FOR THE GLASS OVERLAY AND ITS CHILD COMPONENTS
 
 function loadGlassOverlayComponents() {
-    
 
     // set the greeting message according the time of the day
     if (hour < 5) {
-        document.querySelector('#greeting').innerHTML = 'Late Night?'
+        document.querySelector('#greeting').innerHTML = 'Late Night?';
     } else if (hour < 12) {
-        document.querySelector('#greeting').innerHTML = 'Good Morning'
+        document.querySelector('#greeting').innerHTML = 'Good Morning';
     } else if (hour < 15) {
-        document.querySelector('#greeting').innerHTML = 'Good Afternoon'
+        document.querySelector('#greeting').innerHTML = 'Good Afternoon';
     } else if (hour < 22) {
-        document.querySelector('#greeting').innerHTML = 'Good Evening'
+        document.querySelector('#greeting').innerHTML = 'Good Evening';
     } else {
-        document.querySelector('#greeting').innerHTML = 'Late Night?'
+        document.querySelector('#greeting').innerHTML = 'Late Night?';
     }
     
     // convert the time to a 12-hour clock
@@ -87,15 +86,15 @@ function convertTimeOfDay(hour, timeOfDay) {
     return timeOfDay;
 }
 
-function convertHour(hour) {
+function convertHour(hourValue) {
     // Display time in the 12-hour format
-    if (hour == 0) {
-        hour = 12;
+    if (hourValue == 0) {
+        hourValue = 12;
     }
-    if (hour > 12) {
-        hour = hour - 12;
+    if (hourValue > 12) {
+        hourValue = hourValue - 12;
     }
-    return hour;
+    return hourValue;
 }
 
 function setBackgroundGradient() {
@@ -103,25 +102,25 @@ function setBackgroundGradient() {
 
     if (hour < 5) {
         // early morning gradient
-        document.getElementsByTagName('body').style.background="linear-gradient(-45deg, #767d92, #2f4562, #152642, #081b33)";
+        document.querySelector('body').style.background="linear-gradient(-45deg, #767d92, #2f4562, #152642, #081b33)";
     } else if (hour < 12) {
         // morning gradient
-        document.getElementsByTagName('body').style.background="linear-gradient(-45deg, #fa4e5e, #f9a9e, #99b9d0, #00b2d2)";
+        document.querySelector('body').style.background="linear-gradient(-45deg, #fa4e5e, #f9a9e, #99b9d0, #00b2d2)";
     } else if (hour < 15) {
         // afternoon gradient
-        document.getElementsByTagName('body').style.background="linear-gradient(-45deg, #96adcf, #4570b5, #234181, #1b2966)";
+        document.querySelector('body').style.background="linear-gradient(-45deg, #96adcf, #4570b5, #234181, #1b2966)";
     } else if (hour < 22) {
         // evening gradient
-        document.getElementsByTagName('body').style.background="linear-gradient(-45deg, #fdec6e, #e0943d, #bc361a, #391106)";
+        document.querySelector('body').style.background="linear-gradient(-45deg, #fdec6e, #e0943d, #bc361a, #391106)";
     } else if (hour < 24) {
         // night gradient
-        document.getElementsByTagName('body').style.background="linear-gradient(-45deg, #767d92, #2f4562, #152642, #081b33)";
+        document.querySelector('body').style.background="linear-gradient(-45deg, #767d92, #2f4562, #152642, #081b33)";
     }
 
     // animating gradients
 
-    document.getElementsByTagName('body').style.backgroundSize="400% 400%";
-    document.getElementsByTagName('body').style.animation="gradient 8s ease infinite";
+    document.querySelector('body').style.backgroundSize="400% 400%";
+    document.querySelector('body').style.animation="gradient 8s ease infinite";
 }
 
 // function calls
