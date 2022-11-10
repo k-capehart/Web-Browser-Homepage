@@ -25,6 +25,32 @@ function changeImage() {
 	document.body.style.backgroundImage = 'url(' + filePath + ')';
 }
 
+function setBackgroundGradient() {
+    // Setting background gradients according to the time of the day
+
+    if (hour < 5) {
+        // early morning gradient
+        document.querySelector('body').style.background="linear-gradient(-45deg, #767d92, #2f4562, #152642, #081b33)";
+    } else if (hour < 12) {
+        // morning gradient
+        document.querySelector('body').style.background="linear-gradient(-45deg, #fa4e5e, #f9ab9e, #99b9d0, #00b2d2)";
+    } else if (hour < 15) {
+        // afternoon gradient
+        document.querySelector('body').style.background="linear-gradient(-45deg, #96adcf, #4570b5, #234181, #1b2966)";
+    } else if (hour < 22) {
+        // evening gradient
+        document.querySelector('body').style.background="linear-gradient(-45deg, #fdec6e, #e0943d, #bc361a, #391106)";
+    } else if (hour < 24) {
+        // night gradient
+        document.querySelector('body').style.background="linear-gradient(-45deg, #767d92, #2f4562, #152642, #081b33)";
+    }
+
+    // animating gradients
+
+    document.querySelector('body').style.backgroundSize="400% 400%";
+    document.querySelector('body').style.animation="gradient 8s ease infinite";
+}
+
 // CODE FOR THE GLASS OVERLAY AND ITS CHILD COMPONENTS
 
 function loadGlassOverlayComponents() {
@@ -95,32 +121,6 @@ function convertHour(hourValue) {
         hourValue = hourValue - 12;
     }
     return hourValue;
-}
-
-function setBackgroundGradient() {
-    // Setting background gradients according to the time of the day
-
-    if (hour < 5) {
-        // early morning gradient
-        document.querySelector('body').style.background="linear-gradient(-45deg, #767d92, #2f4562, #152642, #081b33)";
-    } else if (hour < 12) {
-        // morning gradient
-        document.querySelector('body').style.background="linear-gradient(-45deg, #fa4e5e, #f9ab9e, #99b9d0, #00b2d2)";
-    } else if (hour < 15) {
-        // afternoon gradient
-        document.querySelector('body').style.background="linear-gradient(-45deg, #96adcf, #4570b5, #234181, #1b2966)";
-    } else if (hour < 22) {
-        // evening gradient
-        document.querySelector('body').style.background="linear-gradient(-45deg, #fdec6e, #e0943d, #bc361a, #391106)";
-    } else if (hour < 24) {
-        // night gradient
-        document.querySelector('body').style.background="linear-gradient(-45deg, #767d92, #2f4562, #152642, #081b33)";
-    }
-
-    // animating gradients
-
-    document.querySelector('body').style.backgroundSize="400% 400%";
-    document.querySelector('body').style.animation="gradient 8s ease infinite";
 }
 
 // function calls
