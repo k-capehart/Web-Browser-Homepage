@@ -1,0 +1,109 @@
+/* INITIALIZATIONS */
+
+* { 
+    font-family: 'Quicksand';
+    color: white;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* fallback gradient in case JavaScript does not load */
+    background: linear-gradient(-45deg, #B9E49F, #3DA597, #00617A, #003F5F);
+    background-size: 400% 400%;
+    /* fallback animation in case JavaScript does not load */
+	animation: gradient 8s ease infinite;
+	height: auto;
+}
+
+/* GLASS OVERLAY */
+
+.glass {
+    width: 50rem;
+    height: 30rem;
+    padding: 1.2rem;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+    border-radius: 0.75rem;
+    background-color: rgba(255,255,255,0.15);
+    backdrop-filter: blur(0.7rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* GREETING MESSAGE ON GLASS OVERLAY */
+
+#greeting {
+    border: 1.2rem;
+    font-size: 2rem;
+}
+
+/* CLOCK ON GLASS OVERLAY */
+
+#clock {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+#hour {
+    font-size: 12rem;
+}
+#minute {
+    font-size: 5rem;
+}
+#timeSuffix {
+    font-size: 1.4rem;
+}
+
+/* PROMPT ON GLASS OVERLAY */
+
+#question {
+    font-size: 1.5rem;
+}
+
+/* ICONS ON GLASS OVERLAY */
+
+.icons {
+    font-size: 3rem;
+    cursor: pointer;
+}
+.icons ul {
+    padding: 0;
+    margin: 1.2rem;
+    width: 25rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+i {
+    transition: transform 0.3s;
+}
+i::after {      /* this removes unneccesary icon leftovers that may come from the FontAwesome CDN */ 
+    display: none;
+}
+
+/* HOVER STATES */
+
+i:hover {
+    transform: scale(1.2);
+}
+i:not(:hover) {     /* this ensures smooth transform animation when mouse pointer leaves the hover state */
+    transform: scale(1);
+    transition-duration: 0.40s;
+}
+
+/* BACKGROUND ANIMATION */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

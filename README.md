@@ -1,2 +1,4 @@
-# Homepage
-Custom homepage written in HTML/CSS and JavaScript for a web browser
+# Get Started
+"Get Started" is a custom homepage / new tab page built for web browsers.
+<br><br>
+<img src="img/preview.png"></img>
