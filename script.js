@@ -1,24 +1,28 @@
-// INITIALIZATIONS
+let timeOfDay;
+let today;
+let hour;
+let minute;
+let second;
+let day;
+let month;
+let year;
 
-// get/initialize time and date values - global variables
-let timeOfDay = "AM";
-let today = new Date();
-let hour = today.getHours();
-let minute = today.getMinutes();
-let second = today.getSeconds();
-let day = today.getDate();
-let month = today.getMonth();
-let year = today.getFullYear();
-
-// check the time and adjust the format
-minute = checkTime(minute);
-second = checkTime(second);
-
-// CODE FOR THE SITE BACKGROUND
+function updateClock() {
+    timeOfDay = "AM";
+    today = new Date();
+    hour = today.getHours();
+    minute = today.getMinutes();
+    second = today.getSeconds();
+    day = today.getDate();
+    month = today.getMonth();
+    year = today.getFullYear();
+    
+    // check the time and adjust the format
+    minute = checkTime(minute);
+    second = checkTime(second);
+}
 
 function setBackgroundGradient() {
-    // Setting background gradients according to the time of the day
-
     if (hour < 5) {
         // early morning gradient
         document.querySelector('body').style.background="linear-gradient(-45deg, #767d92, #2f4562, #152642, #081b33)";
@@ -41,8 +45,6 @@ function setBackgroundGradient() {
     document.querySelector('body').style.backgroundSize="400% 400%";
     document.querySelector('body').style.animation="gradient 8s ease infinite";
 }
-
-// CODE FOR THE GLASS OVERLAY AND ITS CHILD COMPONENTS
 
 function loadGlassOverlayComponents() {
 
@@ -113,6 +115,7 @@ function convertHour(hourValue) {
     return hourValue;
 }
 
-// jQuery function calls
 $(document).ready(setBackgroundGradient);
 $(document).ready(loadGlassOverlayComponents);
+updateClock();
+setInterval(updateClock, 1000);
