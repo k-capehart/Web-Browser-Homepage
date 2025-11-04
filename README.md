@@ -3,7 +3,7 @@
 <img src="img/preview.png"></img>
 
 Paste the following URL in your browser settings for your homepage:<br/>
-`https://raw.githack.com/k-capehart/Web-Browser-Homepage/master/index.html`
+https://rawcdn.githack.com/k-capehart/Web-Browser-Homepage/41bc183f9ff9d8beb3ea12a4a25133b8d7fe5d78/index.html
 
 Alternatively, pull down the repository and set your homepage URL to the local file path, i.e.<br/>
 `/Users/kcapehart/Documents/Web-Browser-Homepage/index.html`
